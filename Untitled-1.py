@@ -160,4 +160,25 @@ if ding > 500000:
 print("total si dico setelah diskon", total_harga)
 
 
+menu_sedia = input("daging ayam")
 
+if menu_sedia == "daging ayam":
+    print(menu_sedia)
+elif menu_sedia == "daging ebek":
+    print("adanya gading bebek")
+else:
+    print("g ada launknya")
+    
+
+##string kosong di anggap false oleh python
+x = ""
+
+if x:
+    print("Ini True")
+
+tinggi_badan = 120
+
+if tinggi_badan >=160:
+    print("Anda boleh menaiki roller coaster")
+else:
+    print("Anda tidak diperbolehkan menaiki roller coaster")
