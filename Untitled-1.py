@@ -193,3 +193,13 @@ kelulusan = True
 kelas_1 = ("yeay, anda lulus", "coba lagi taon depan")[kelulusan]
 print(kelas_1)
 
+rangee = range(1,11)
+
+for i in rangee:
+    print(i)
+
+counter_range = 1
+
+while counter_range <= 11:
+    print(counter_range)
+    counter_range +=1
