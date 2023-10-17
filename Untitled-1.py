@@ -182,3 +182,14 @@ if tinggi_badan >=160:
     print("Anda boleh menaiki roller coaster")
 else:
     print("Anda tidak diperbolehkan menaiki roller coaster")
+
+
+mumtaz = True
+print("greate score") if mumtaz else ("not greate")
+
+#TUPLE ternary
+kelulusan = True
+
+kelas_1 = ("yeay, anda lulus", "coba lagi taon depan")[kelulusan]
+print(kelas_1)
+
