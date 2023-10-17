@@ -160,7 +160,8 @@ if ding > 500000:
 print("total si dico setelah diskon", total_harga)
 
 
-menu_sedia = input("daging ayam")
+##menu_sedia = input("daging ayam")
+menu_sedia = "daging ayam"
 
 if menu_sedia == "daging ayam":
     print(menu_sedia)
@@ -203,3 +204,25 @@ counter_range = 1
 while counter_range <= 11:
     print(counter_range)
     counter_range +=1
+
+for i in range(1, 3):
+    for j in range(1, 3):
+        print(i, j)
+
+for i in range(2):
+    print("perulangan luar: ", i)
+    for j in range(10):
+        print("perulangan dalam:", j)
+        if j == 1:
+            break
+
+#else in for loop break
+
+numbersi = [1, 2, 3, 4, 5]
+
+for num in numbersi:
+    if num == 6:
+        print("angka di temukan oke!")
+        break
+    else:
+        print("angka jg g tau dimn")
