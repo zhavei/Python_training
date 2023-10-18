@@ -216,8 +216,7 @@ for i in range(2):
         if j == 1:
             break
 
-#else in for loop break
-
+#else setelah (in) for & loop break
 numbersi = [1, 2, 3, 4, 5]
 
 for num in numbersi:
@@ -226,3 +225,40 @@ for num in numbersi:
         break
     else:
         print("angka jg g tau dimn")
+
+
+## else after while
+
+counto = 0
+
+while counto < 3:
+    print("Dicoding Indonesia")
+    counto += 1
+else:
+    print("Blok else dieksekusi karena kondisi pada while salah (3<3 == False) .", counto)
+
+n = 10
+while n > 0:
+    n = n - 1
+    if n == 7:
+        break
+    print(n)
+else:
+    print("Loop selesai")
+
+x = 10
+
+if x > 5:
+    pass
+else:
+    print("Nilai x tidak memenuhi kondisi")
+
+angka = [1, 2, 3, 4]
+pangkat = []
+for n in angka:
+  pangkat.append(n**2)
+print(pangkat)
+#Namun, alih-alih membuat kode program seperti di atas. Anda dapat melakukan hal berikut.
+angka = [1, 2, 3, 4]
+pangkat = [n**2 for n in angka]
+print(pangkat)
