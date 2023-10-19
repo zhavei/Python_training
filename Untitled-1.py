@@ -262,3 +262,18 @@ print(pangkat)
 angka = [1, 2, 3, 4]
 pangkat = [n**2 for n in angka]
 print(pangkat)
+
+"""
+TODO:
+Buatlah sebuah variabel bertipe list bernama "evenNumber" dengan ketentuan:
+- variabel tersebut menampung bilangan genap dari 0 hingga 500 (ingat 0 dan 500 termasuk).
+Tips:
+Anda bisa menggunakan loop dan if atau list comprehension untuk memudahkan.
+"""
+numberRange = range(0,501)
+evenNumber = []
+for number in numberRange:
+    if number % 2 == 0:
+        evenNumber.append(number)
+        print(evenNumber)
+
