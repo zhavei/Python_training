@@ -277,3 +277,25 @@ for number in numberRange:
         evenNumber.append(number)
         print(evenNumber)
 
+
+#penanganan kesalahan syntx dan exception
+z = 0
+try:
+    print(1/z)
+except ZeroDivisionError:
+    print("tidak bisa 1 di bagi 0")
+
+# try except else finally
+
+var_dict = {"rata_rata": "1.0"}
+
+try:
+    print(f"rata-rata adalah {var_dict['rata_rata']}")
+except KeyError:
+    print("Key tidak ditemukan.")
+except TypeError:
+    print("Anda tidak bisa membagi nilai dengan tipe data string")
+else:
+    print("Kode ini dieksekusi jika tidak ada exception.")
+finally:
+    print("Kode ini dieksekusi terlepas dari ada atau tidaknya exception.")
