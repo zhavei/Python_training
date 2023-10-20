@@ -306,3 +306,12 @@ if var < 0 :
 else:
     for i in range(var):
         print(i+1)
+
+
+for i in range(1, 3):    
+    for j in range(1, 3):    
+        print(i,j) 
+
+i = 9 
+if i<10:    
+    print(i) 
