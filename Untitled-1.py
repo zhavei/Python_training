@@ -299,3 +299,10 @@ else:
     print("Kode ini dieksekusi jika tidak ada exception.")
 finally:
     print("Kode ini dieksekusi terlepas dari ada atau tidaknya exception.")
+
+var = -1
+if var < 0 :
+    raise ValueError("bilangan negatif tidak di bolehin bro")
+else:
+    for i in range(var):
+        print(i+1)
