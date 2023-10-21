@@ -300,7 +300,8 @@ else:
 finally:
     print("Kode ini dieksekusi terlepas dari ada atau tidaknya exception.")
 
-var = -1
+#var = -1
+var = 1
 if var < 0 :
     raise ValueError("bilangan negatif tidak di bolehin bro")
 else:
@@ -315,3 +316,39 @@ for i in range(1, 3):
 i = 9 
 if i<10:    
     print(i) 
+
+##playin with list a.k.a array
+import array
+
+x_ = array.array("i",[1,2,3,4,5,6,7,8,9,10])
+print(x_)
+print(type(x_))
+
+var_arr = [0 for i in range(10)]
+for i in range(10):
+    var_arr[i] = i
+print(var_arr)
+
+#Pemrosesan Sekuensial pada Array
+
+var_array = [1,2,3,4,5]
+
+for i in range(len(var_array)):
+    current_element = var_array[i]
+    next_index = i + 1
+
+    if next_index < len(var_array):
+        next_element = var_array[next_index]
+    else:
+        next_element = None
+    print(f"Current element: {current_element}, next elements: {next_element}")
+
+var_arr2 = [1,7,2,89,3,4,10,56]
+left_pointer = var_arr2[0]
+
+for i in range(1, len(var_arr2)):
+    right_pointer = var_arr2[i]
+    if right_pointer > left_pointer:
+        left_pointer = right_pointer
+
+print(left_pointer)
