@@ -352,3 +352,17 @@ for i in range(1, len(var_arr2)):
         left_pointer = right_pointer
 
 print(left_pointer)
+
+
+# kuis array list
+var_array = [i for i in range(101)]
+
+total  = 0 
+count = 0 
+
+for num in var_array:
+    total += num
+    count += 1
+result = total / count
+
+print("Rata-rata dari elemen-elemen array adalah:", result)
