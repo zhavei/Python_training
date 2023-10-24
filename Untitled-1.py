@@ -343,6 +343,7 @@ for i in range(len(var_array)):
         next_element = None
     print(f"Current element: {current_element}, next elements: {next_element}")
 
+#akses element as index
 var_arr2 = [1,7,2,89,3,4,10,56]
 left_pointer = var_arr2[0]
 
@@ -366,3 +367,51 @@ for num in var_array:
 result = total / count
 
 print("Rata-rata dari elemen-elemen array adalah:", result)
+
+##using library numpy
+import numpy
+
+matriks = numpy.array([[1, 2, 3], [4, 5, 6], [7, 8 ,9]])
+print(matriks)
+
+import numpy 
+import sys
+
+var_list= [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+var_array= numpy.array([[1, 2, 3], [4, 5, 6], [7, 8 ,9]])
+
+print("Ukuran keseluruhan elemen list dalam bytes = ",sys.getsizeof(var_list)*len(var_list))
+print("Ukuran keseluruhan elemen NumPy dalam bytes = ", var_array.size*var_array.itemsize)
+
+matrikss = [[0 for j in range(4)] for i in range(3)]
+
+print(matrikss)
+
+#akses index pada matriks
+
+var_mat = [[1, 2, 3, 4, 5],
+           [6, 7, 8, 9, 10],
+           [11, 12, 13, 14, 15],
+           [16, 17, 18, 19, 20],
+           [21, 22, 23, 24, 25]]
+           
+print(var_mat[2][1])
+
+# Membuat matriks 2x2
+var_mat = [[5, 0],
+          [1, -2]]
+def_mat = [[0 for j in range(len(var_mat))] for i in range(len(var_mat))]
+
+for i in range (len(var_mat)):
+    for j in range(len(var_mat[0])):
+        def_mat[i][j] = var_mat[i][j] * 2
+
+print(def_mat)
+
+# di sederhanakan dengan numpy
+import numpy as np
+
+var_matt = np.array([[5, 0],
+                    [1, -2]])
+result = var_matt * 2 
+print(result)
