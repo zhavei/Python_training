@@ -428,3 +428,72 @@ print(persegi_panjang_pertama)
 persegi_panjang_kedua = mencari_luas_persegi_panjang(4,15)
 print(persegi_panjang_kedua)
 
+def greeting(nama, pesan):
+    return "Halo, " + nama + "! " + pesan
+
+print(greeting("Dicoding", "Selamat pagi!"))
+print(greeting(pesan="Selamat sore!", nama="Dicoding"))
+
+def hitung_total(*args):
+    print("the type is", type(args))
+    total = sum(args)
+    return total
+
+hitung_ini = hitung_total(1, 2, 3, 4, 5, 6, 7, 8)
+hitung_itu = hitung_total(12,52,41,45,12,32)
+
+print(hitung_ini)
+print(hitung_itu)
+
+def cetak_info(**kwargs):
+    info = ""
+    for key, value in kwargs.items():
+        info += key + ": " + value + ", "
+    return info
+
+print(cetak_info(nama="Dicoding", usia="17", pekerjaan="Python Programmer"))
+print(cetak_info(nama="Dicoding", usia="17", pekerjaan="Python Programmer", tempat_lahir="Bandung", lulusan="ITB"))
+
+#lamda functions
+#func_name = lambda args: return_variable
+
+cari_luas_persegi_panjang = lambda panjang, lebar, tinggi: panjang*lebar
+print("luasnya: ", cari_luas_persegi_panjang(2,2,3),"m2")
+
+#variable global dan lokal
+a = 10
+
+def add(b):
+    result = a+b
+    return result
+
+bilanganPertama = add(20)
+print(bilanganPertama)
+
+def add(a, b):
+    lokal_var = 5
+    result = a+b-lokal_var
+    return result
+
+bilanganPertama = add(10,20)
+print(bilanganPertama)
+
+#multi module
+from hello import mencari_luas_persegi_panjang, namaa
+import hello
+
+hitung_aja = mencari_luas_persegi_panjang(panjang= 3, lebar= 2 )
+print(hitung_aja)
+print(namaa)
+
+#kuis fungsi
+
+def minimal (a, b):
+    if a <= b :
+        return a
+    else:
+        return b
+    
+minimalis = minimal(6, 9)
+print("jadi gedean mana", minimalis)
+
