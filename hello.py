@@ -126,7 +126,7 @@ class MobilMahal(MobilSeport):
     def turbo(self):
         self.kecepatan += 50
 
-    def tambah_kecepatan_sport(self):     # tambah_kecepatan
+    def tambah_kecepatan(self):     # tambah_kecepatan
         self.kecepatan += 20
 
 # Kelas Mobil Dasar
@@ -138,7 +138,7 @@ mobil_sport_1 = MobilMahal("Hitam", "DicodingSportCar", 160)
 print(mobil_sport_1.kecepatan)
 mobil_sport_1.turbo()
 print(mobil_sport_1.kecepatan)
-mobil_sport_1.tambah_kecepatan_sport()     # Memanggil metode baru tambah kecepatan()
+mobil_sport_1.tambah_kecepatan()     # Memanggil metode baru tambah kecepatan()
 print(mobil_sport_1.kecepatan)
 
 class MobilBaru:
@@ -163,3 +163,33 @@ mobil_sport_1 = MobilSportBaru("Hitam", "DicodingSportCar", 160)
 mobil_sport_1.tambah_kecepatan()     # Memanggil metode baru tambah kecepatan()
 print(mobil_sport_1.kecepatan)
 
+## koding kuis oop python
+
+class Animal:
+    def __init__(self, name, age, species) -> None:
+        self.name = name
+        self.age = age
+        self.species = species
+
+class Cat(Animal):
+    """Class representing a person"""
+    def deskripsi(self):
+        return f"{self.name} adalah kucing berjenis {self.species} yang sudah berumur {self.age} tahun"
+    
+    def suara(self):
+        return "meoew!"
+
+myCat = Cat("Dico", 3, "Indo")
+
+print(myCat.deskripsi())
+print(myCat.suara())
+
+#format code
+
+class Kalkulator:
+    """kalkulator tambah kurang"""
+    def __init__(self, _i):
+        self.i = _i
+    def tambah(self, _i): return self.i + _i
+    def kurang(self, _i):
+        return self.i - _i
