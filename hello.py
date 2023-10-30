@@ -193,3 +193,34 @@ class Kalkulator:
     def tambah(self, _i): return self.i + _i
     def kurang(self, _i):
         return self.i - _i
+    
+## regex
+
+import re
+
+pola= '^a...s$'
+string_tes= 'abyss'
+hasil= re.match(pola, string_tes)
+ 
+if hasil:
+    print("Pencarian berhasil.")
+else:
+    print("Pencarian gagal.")
+
+## math
+import math
+print(math.sqrt(25)) 
+print(math.pi) 
+
+##file: hello.py
+
+import argparse
+ 
+parser = argparse.ArgumentParser()
+parser.add_argument('-o', '--output', action='store_true', help="tampilkan output")
+args = parser.parse_args()
+ 
+if args.output:
+   print("Halo, ini merupakan sebuah output dari panggildicoding.py")
+
+
