@@ -223,4 +223,84 @@ args = parser.parse_args()
 if args.output:
    print("Halo, ini merupakan sebuah output dari panggildicoding.py")
 
+## panda library
 
+import pandas as pd
+
+data = {
+    "nama": ["john", "jane", "jin", "bebek"],
+    "usia": [25, 63, 56, 32],
+    "pekerjaan": ["kang teyoy", "kang krupuk", "kang bangunan", "kang ayam"]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+## matplotlib
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+plt.plot(x, y)
+
+plt.title("Contoh Plot Garis")
+plt.xlabel("Sumbu X")
+plt.ylabel("Sumbu Y")
+
+plt.show()
+
+##seaborn
+
+import seaborn as sns
+# Contoh data
+tips = sns.load_dataset('tips')  # Memuat dataset tips dari Seaborn
+ 
+# Contoh plot histogram
+sns.histplot(tips['total_bill'], kde=True)
+plt.title('Histogram Total Bill')
+plt.xlabel('Total Bill')
+plt.ylabel('Frequency')
+plt.show()
+
+##json
+import json
+ 
+# contoh JSON:
+x = '{ "nama":"Buchori", "umur":22, "Kota":"New York"}'
+ 
+# parse  x:
+y = json.loads(x)
+ 
+print(y["umur"])
+
+#pickle
+
+import pickle
+contoh_dictionary = {1:"6", 2:"2", 3:"f"}
+pickle_keluar = open("dict.pickle","wb")
+pickle.dump(contoh_dictionary, pickle_keluar)
+pickle_keluar.close()
+
+pickle_masuk = open("dict.pickle", "rb")
+contohDictionary = pickle.load(pickle_masuk)
+pickle_masuk.close()
+ 
+print(contohDictionary)
+
+##BeautifulSoup web scarping
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+ 
+# Pengambilan konten
+url = "http://python.org/"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+ 
+# Membuat objek BeautifulSoup
+soup = BeautifulSoup(html, "html.parser")
+ 
+# Mencetak judul halaman
+print(soup.title)
